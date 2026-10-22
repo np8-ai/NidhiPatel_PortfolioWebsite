@@ -7,15 +7,16 @@
 
 /* ---------- VARIABLES ---------- */
 :root {
-  --bg:        #0b0b0b;
-  --bg-card:   #111111;
-  --bg-card2:  #161616;
-  --border:    rgba(233, 229, 217, 0.12);
-  --border-h:  rgba(184, 255, 60, 0.4);
+  --bg:        #080808;
+  --bg-card:   rgba(13, 13, 13, 0.72);
+  --bg-card2:  rgba(22, 22, 22, 0.65);
+  --border:    rgba(233, 229, 217, 0.13);
+  --border-h:  rgba(184, 255, 60, 0.45);
   --cream:     #e9e5d9;
   --muted:     #888580;
   --accent:    #b8ff3c;
   --accent2:   #7fff00;
+  --gold:      #d4af37;
   --red:       #ff4c4c;
   --topbar-h:  56px;
   --font-mono: 'DM Mono', 'Courier New', monospace;
@@ -53,7 +54,7 @@ code {
 ::-webkit-scrollbar-thumb { background: var(--border-h); border-radius: 2px; }
 
 /* ============================================================
-   CANVAS — 3D BACKGROUND
+   CANVAS — 3D BACKGROUND (tanishsaini style)
    ============================================================ */
 #bg3d {
   position: fixed;
@@ -62,6 +63,20 @@ code {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
+  display: block;
+}
+
+/* ============================================================
+   CANVAS — MOUSE POINTER TRAIL & SPARKLE (divyanshigupta style)
+   ============================================================ */
+#cursorCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  display: block;
 }
 
 /* ============================================================
@@ -72,7 +87,7 @@ code {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.045;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 200px 200px;
 }
@@ -216,14 +231,16 @@ code {
    ============================================================ */
 .card {
   background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 2rem;
   transition: border-color var(--tr), box-shadow var(--tr);
 }
 .card:hover {
-  border-color: rgba(184,255,60,0.2);
-  box-shadow: 0 0 32px rgba(184,255,60,0.04);
+  border-color: rgba(184,255,60,0.25);
+  box-shadow: 0 0 32px rgba(184,255,60,0.06);
 }
 
 /* ============================================================
@@ -275,6 +292,8 @@ code {
 .hero-section {
   padding: 3rem 2rem;
   background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   position: relative;
