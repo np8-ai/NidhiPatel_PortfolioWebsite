@@ -3,10 +3,10 @@
 > **IT4048 – Version Control with Git and GitHub**  
 > Subject Assignment | GitHub Pages Deployment
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/Portfolio_Website/)
+[![Live Demo]([https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/))
 [![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/Portfolio_Website)
 
-Live website: [https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/Portfolio_Website/)
+Live website: [[https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/))
 
 ---
 
