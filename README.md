@@ -3,10 +3,10 @@
 > **IT4048 – Version Control with Git and GitHub**  
 > Subject Assignment | GitHub Pages Deployment
 
-[![Live Demo]([https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/))
-[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/Portfolio_Website)
+[![Live Demo](https://img.shields.io/badge/Live-Website-green?style=for-the-badge)](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/)
+[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/NidhiPatel_PortfolioWebsite)
 
-Live website: [[https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/))
+Live website: [https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/)
 
 ---
 
@@ -82,14 +82,14 @@ Portfolio_Website/
    - Branch: `main`
    - Folder: `/ (root)`
 4. Click **Save**
-5. Live link: **`https://np8-ai.github.io/Portfolio_Website/`**
+5. Live link: **`https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/`**
 
 ---
 
 ## 🖥️ How to Run Locally
 
 ```bash
-git clone https://github.com/np8-ai/Portfolio_Website.git
+git clone (https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/.git)
 cd Portfolio_Website
 # Open index.html in any modern browser — zero build step required!
 ```
@@ -100,11 +100,10 @@ cd Portfolio_Website
 
 | Field | Value |
 |---|---|
-| **Name** | Nidhi Patel |
+| **Name** | PATEL NIDHI |
 | **University** | Uka Tarsadia University |
 | **Degree** | B.Tech — Computer Science & Engineering (2nd Year) |
 | **Subject** | IT4048 – Version Control with Git and GitHub |
-| **Submission Deadline** | On or before 24th October 2026 |
 
 ---
 
