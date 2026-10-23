@@ -1,113 +1,113 @@
-# 🚀 Personal Portfolio Website
+# 🚀 Personal Portfolio Website — Nidhi Patel
 
 > **IT4048 – Version Control with Git and GitHub**  
 > Subject Assignment | GitHub Pages Deployment
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://yourusername.github.io/YourName_PortfolioWebsite/)
-[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/yourusername/YourName_PortfolioWebsite)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/)
+[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/NidhiPatel_PortfolioWebsite)
 
 ---
 
 ## 📌 Overview
 
-A fully responsive **personal portfolio website** showcasing my skills, projects, and contact information — built with HTML5, CSS3, and Vanilla JavaScript, and deployed live via **GitHub Pages**.
+A responsive personal portfolio website showcasing skills, projects, achievements, and contact information — built with **HTML5, CSS3, Vanilla JavaScript, and Three.js**, featuring a 3D wireframe geometric sphere background and celestial sparkle cursor, deployed live via **GitHub Pages**.
 
 ---
 
 ## 📄 Pages / Sections
 
 | Section | Description |
-|---------|-------------|
-| 🏠 **Home / About** | Name, photo, bio, tagline, social links & résumé download |
-| 💡 **Skills** | Technical skills with animated progress bars, soft skills, and tools |
-| 🗂️ **Projects** | 4 sample projects with descriptions, tech tags, and GitHub links |
-| 📬 **Contact** | Contact form with validation + social/email links |
+|---|---|
+| 🏠 **Home / About** | Student name, professional tagline, bio, tech ticker, social links & résumé download |
+| 🎓 **Education** | B.Tech in CSE at Uka Tarsadia University (2nd Year, 3rd Semester) |
+| 💡 **Skills** | Technical skills with animated progress bars (Java, Python, C, Web Dev, SQL/MySQL, Git/GitHub) + Tools chips + Soft skills |
+| 🏆 **Activities** | Campus Ambassador at **Techfest, IIT Bombay** & Team HeritageCoders (SIH26090) |
+| 🗂️ **Projects** | Artisans360 (SIH), Pharmacy Management System, Personal Portfolio, and Arduino Smart Rover |
+| 💻 **Terminal** | Interactive developer status window with GitHub link |
+| 📬 **Contact** | Contact form (Name, Email, Message) with transmission feedback + verified social links |
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **HTML5** — Semantic structure
-- **CSS3** — Flexbox, Grid, animations, responsive design
-- **JavaScript (ES6+)** — Typing animation, scroll effects, form validation
-- **Font Awesome 6** — Icons
-- **Google Fonts (Poppins)** — Typography
-- **GitHub Pages** — Hosting & deployment
+- **HTML5** — Semantic page structure
+- **CSS3** — Custom properties, Grid, Flexbox, glassmorphic backdrop-filter, animations, CRT scanline & noise overlays
+- **JavaScript (ES6+)** — Three.js 3D particle sphere, celestial star sparkle & ribbon trail cursor, text scramble effect, scroll progress, form validation
+- **Three.js** — 3D interactive wireframe geodesic sphere with dual orbital rings and 1200+ particle dust field
+- **Font Awesome 6 & Google Fonts** — Icons & DM Mono / Inter typography
+- **Git & GitHub Pages** — Version control and cloud hosting
 
 ---
 
 ## ✨ Features
 
-- ✅ Fully responsive (Mobile / Tablet / Desktop)
-- ✅ Smooth scroll + active nav link highlighting
-- ✅ Animated typing effect in the hero section
-- ✅ Skill progress bars animated on scroll
-- ✅ Fade-in animations using Intersection Observer
-- ✅ Floating avatar animation
-- ✅ Mobile hamburger menu
-- ✅ Contact form with live validation
-- ✅ Résumé download button (PDF)
-- ✅ Back-to-top button
-- ✅ Dark theme with blue accent
+- ✅ Fully responsive across desktop, tablet, and mobile devices
+- ✅ **Three.js 3D interactive background** with parallax depth and camera dolly on scroll
+- ✅ **Celestial mouse pointer** with fluid golden ribbon trail and 4-point diamond star sparkle
+- ✅ Terminal-style text scramble / decrypt animation on load
+- ✅ Live scroll progress indicator at top of viewport
+- ✅ Animated skill progress bars on scroll via `IntersectionObserver`
+- ✅ Working contact form with instant message status feedback
+- ✅ Working résumé download button (`resume/resume.pdf`)
+- ✅ Back-to-top smooth scrolling button
 
 ---
 
 ## 📁 Project Structure
 
-```
-YourName_PortfolioWebsite/
-├── index.html          # Main HTML (single-page, all sections)
+```text
+NidhiPatel_PortfolioWebsite/
+├── index.html          # Main single-page portfolio website
 ├── css/
-│   └── style.css       # All styles, responsive rules
+│   └── style.css       # Retro dark theme, glassmorphic cards & layout
 ├── js/
-│   └── main.js         # All interactivity & animations
+│   └── main.js         # Three.js 3D scene, celestial cursor & effects
 ├── images/
-│   ├── profile.jpg     # Your profile photo (replace)
 │   └── avatar-placeholder.svg
 ├── resume/
-│   └── resume.pdf      # Your résumé PDF (replace)
-└── README.md
+│   ├── README.md
+│   └── resume.pdf      # Student résumé PDF
+└── README.md           # Repository documentation
 ```
 
 ---
 
 ## 🚀 Deployment (GitHub Pages)
 
-1. Push all files to the `main` branch
-2. Go to **Settings → Pages → Source → Deploy from branch: `main` / `/ (root)`**
-3. Live link will be: `https://yourusername.github.io/YourName_PortfolioWebsite/`
+1. Push all project files to the `main` branch
+2. In GitHub, navigate to **Settings → Pages**
+3. Under **Build and deployment → Source**, choose:
+   - Branch: `main`
+   - Folder: `/ (root)`
+4. Click **Save**
+5. Live link: **`https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/`**
 
 ---
 
 ## 🖥️ How to Run Locally
 
 ```bash
-git clone https://github.com/yourusername/YourName_PortfolioWebsite.git
-cd YourName_PortfolioWebsite
-# Open index.html in your browser — no build step needed!
+git clone https://github.com/np8-ai/NidhiPatel_PortfolioWebsite.git
+cd NidhiPatel_PortfolioWebsite
+# Open index.html in any modern browser — zero build step required!
 ```
-
----
-
-## 📷 Screenshots
-
-> *(Add screenshots of your portfolio pages here after deployment)*
 
 ---
 
 ## 👤 Student Details
 
 | Field | Value |
-|-------|-------|
-| **Name** | Your Name |
-| **Enrollment No.** | Your Enrollment Number |
+|---|---|
+| **Name** | Nidhi Patel |
+| **University** | Uka Tarsadia University |
+| **Degree** | B.Tech — Computer Science & Engineering (2nd Year) |
 | **Subject** | IT4048 – Version Control with Git and GitHub |
-| **Submission Date** | On or before 24th October 2026 |
+| **Submission Deadline** | On or before 24th October 2026 |
 
 ---
 
-## 📬 Contact
+## 📬 Contact & Links
 
-- 📧 Email: [your.email@example.com](mailto:your.email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
-- 🐙 GitHub: [github.com/yourusername](https://github.com/yourusername)
+- 📧 **Email:** [np.tech3000@gmail.com](mailto:np.tech3000@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/nidhi-patel-b30914437](https://www.linkedin.com/in/nidhi-patel-b30914437/)
+- 🐙 **GitHub:** [github.com/np8-ai](https://github.com/np8-ai)
