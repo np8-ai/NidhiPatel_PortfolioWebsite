@@ -3,8 +3,10 @@
 > **IT4048 – Version Control with Git and GitHub**  
 > Subject Assignment | GitHub Pages Deployment
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/)
-[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/NidhiPatel_PortfolioWebsite)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://np8-ai.github.io/Portfolio_Website/)
+[![GitHub repo](https://img.shields.io/badge/Repository-GitHub-black?style=for-the-badge&logo=github)](https://github.com/np8-ai/Portfolio_Website)
+
+Live website: [https://np8-ai.github.io/Portfolio_Website/](https://np8-ai.github.io/Portfolio_Website/)
 
 ---
 
@@ -22,7 +24,7 @@ A responsive personal portfolio website showcasing skills, projects, achievement
 | 🎓 **Education** | B.Tech in CSE at Uka Tarsadia University (2nd Year, 3rd Semester) |
 | 💡 **Skills** | Technical skills with animated progress bars (Java, Python, C, Web Dev, SQL/MySQL, Git/GitHub) + Tools chips + Soft skills |
 | 🏆 **Activities** | Campus Ambassador at **Techfest, IIT Bombay** & Team HeritageCoders (SIH26090) |
-| 🗂️ **Projects** | Artisans360 (SIH), Pharmacy Management System, Personal Portfolio, and Arduino Smart Rover |
+| 🗂️ **Projects** | Artisans360 (SIH) and MediMart |
 | 💻 **Terminal** | Interactive developer status window with GitHub link |
 | 📬 **Contact** | Contact form (Name, Email, Message) with transmission feedback + verified social links |
 
@@ -56,7 +58,7 @@ A responsive personal portfolio website showcasing skills, projects, achievement
 ## 📁 Project Structure
 
 ```text
-NidhiPatel_PortfolioWebsite/
+Portfolio_Website/
 ├── index.html          # Main single-page portfolio website
 ├── css/
 │   └── style.css       # Retro dark theme, glassmorphic cards & layout
@@ -80,15 +82,15 @@ NidhiPatel_PortfolioWebsite/
    - Branch: `main`
    - Folder: `/ (root)`
 4. Click **Save**
-5. Live link: **`https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/`**
+5. Live link: **`https://np8-ai.github.io/Portfolio_Website/`**
 
 ---
 
 ## 🖥️ How to Run Locally
 
 ```bash
-git clone https://github.com/np8-ai/NidhiPatel_PortfolioWebsite.git
-cd NidhiPatel_PortfolioWebsite
+git clone https://github.com/np8-ai/Portfolio_Website.git
+cd Portfolio_Website
 # Open index.html in any modern browser — zero build step required!
 ```
 
@@ -112,3 +114,4 @@ cd NidhiPatel_PortfolioWebsite
 - 💼 **LinkedIn:** [linkedin.com/in/nidhi-patel-b30914437](https://www.linkedin.com/in/nidhi-patel-b30914437/)
 - 🐙 **GitHub:** [github.com/np8-ai](https://github.com/np8-ai)
 "# Portfolio_Website" 
+"# NidhiPatel_PortfolioWebsite" 
