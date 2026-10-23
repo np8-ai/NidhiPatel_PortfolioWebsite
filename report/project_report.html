@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Mini-Project Report — Nidhi Patel (IT4048)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 16mm 18mm 16mm 18mm;
+      @bottom-right {
+        content: counter(page);
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        color: #718096;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #2d3748;
+      background: #ffffff;
+      line-height: 1.55;
+      font-size: 9.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Page Breaks */
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .no-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* =========================================================
+       PAGE 1: COVER PAGE
+       ========================================================= */
+    .cover-border {
+      border: 2px solid #3182ce;
+      border-radius: 4px;
+      padding: 42px 36px;
+      height: 260mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .cover-inst-title {
+      font-size: 15.5pt;
+      font-weight: 800;
+      color: #1a365d;
+      letter-spacing: 0.04em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .cover-dept-title {
+      font-size: 11pt;
+      font-weight: 500;
+      color: #4a5568;
+      margin-top: 8px;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      align-self: center;
+      background: #ebf8ff;
+      color: #2b6cb0;
+      border: 1px solid #bee3f8;
+      border-radius: 30px;
+      padding: 6px 22px;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 28px auto 0;
+    }
+
+    .cover-main-title {
+      font-size: 27pt;
+      font-weight: 800;
+      color: #1a202c;
+      line-height: 1.15;
+      margin-top: 40px;
+      letter-spacing: -0.02em;
+    }
+
+    .cover-subtitle {
+      font-size: 11.5pt;
+      color: #718096;
+      font-weight: 400;
+      max-width: 520px;
+      margin: 12px auto 0;
+      line-height: 1.5;
+    }
+
+    .cover-table-wrap {
+      margin: 40px auto;
+      width: 100%;
+      max-width: 520px;
+      border-top: 2px solid #3182ce;
+      border-bottom: 2px solid #3182ce;
+      padding: 20px 0;
+    }
+
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      row-gap: 13px;
+      text-align: left;
+      font-size: 10pt;
+    }
+
+    .cover-grid-label {
+      font-weight: 700;
+      color: #2d3748;
+    }
+
+    .cover-grid-value {
+      color: #1a202c;
+      font-weight: 500;
+    }
+
+    .cover-footer {
+      font-size: 9.5pt;
+      color: #718096;
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       HEADINGS & TYPOGRAPHY
+       ========================================================= */
+    h1.sec-title {
+      font-size: 16pt;
+      font-weight: 800;
+      color: #1a365d;
+      border-bottom: 2px solid #3182ce;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    h2.sub-title {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #2b6cb0;
+      border-left: 3.5px solid #3182ce;
+      padding-left: 8px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 9px;
+      text-align: justify;
+      color: #2d3748;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      color: #2d3748;
+    }
+
+    strong {
+      color: #1a202c;
+    }
+
+    /* =========================================================
+       TABLES
+       ========================================================= */
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 14px;
+      font-size: 8.5pt;
+    }
+
+    table.data-table th, table.data-table td {
+      border: 1px solid #e2e8f0;
+      padding: 7px 9px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data-table th {
+      background: #ebf8ff;
+      color: #2c5282;
+      font-weight: 700;
+    }
+
+    table.data-table tr:nth-child(even) td {
+      background: #f7fafc;
+    }
+
+    .badge-pass {
+      display: inline-block;
+      background: #c6f6d5;
+      color: #22543d;
+      font-weight: 700;
+      font-size: 7.5pt;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    /* =========================================================
+       CODE & TERMINAL BLOCKS
+       ========================================================= */
+    pre.code-block {
+      background: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 8pt;
+      color: #2d3748;
+      line-height: 1.45;
+      margin: 10px 0 12px;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      background: #edf2f7;
+      color: #2b6cb0;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 8pt;
+    }
+
+    .flow-box {
+      background: #f0f7ff;
+      border-left: 3.5px solid #3182ce;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 10px 0 14px;
+      font-size: 8.5pt;
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       SCREENSHOTS & PROJECTS
+       ========================================================= */
+    .img-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 10px 0 4px;
+      background: #000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .img-card img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .img-card-mobile {
+      max-width: 250px;
+      margin: 10px auto 4px;
+    }
+
+    .img-caption {
+      font-size: 8pt;
+      color: #718096;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .project-card-report {
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      background: #fafbfc;
+    }
+
+    .project-card-report h4 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #2b6cb0;
+      margin-bottom: 3px;
+    }
+
+    .project-meta-pill {
+      display: inline-block;
+      font-size: 7pt;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #e2e8f0;
+      color: #4a5568;
+      margin-right: 5px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       PAGE 1: COVER PAGE
+       ========================================================= -->
+  <div class="page-break">
+    <div class="cover-border">
+      <div>
+        <h1 class="cover-inst-title">
+          Asha M. Tarsadia Institute of Computer<br>Science and Technology
+        </h1>
+        <p class="cover-dept-title">Department of Computer Science and Engineering</p>
+        <div class="cover-badge">Academic Mini-Project Report</div>
+      </div>
+
+      <div>
+        <h2 class="cover-main-title">Personal Portfolio Website</h2>
+        <p class="cover-subtitle">
+          A Responsive, 3D Web Application with Version Control &amp; Continuous Static Deployment
+        </p>
+
+        <div class="cover-table-wrap">
+          <div class="cover-grid">
+            <span class="cover-grid-label">Student Name:</span>
+            <span class="cover-grid-value">Nidhi Patel</span>
+
+            <span class="cover-grid-label">Enrollment Number:</span>
+            <span class="cover-grid-value">202503103510XXX</span>
+
+            <span class="cover-grid-label">Subject Code:</span>
+            <span class="cover-grid-value">IT4048</span>
+
+            <span class="cover-grid-label">Subject Name:</span>
+            <span class="cover-grid-value">Version Control with Git and GitHub</span>
+
+            <span class="cover-grid-label">Repository Name:</span>
+            <span class="cover-grid-value">NidhiPatel_PortfolioWebsite</span>
+
+            <span class="cover-grid-label">Deployment Platform:</span>
+            <span class="cover-grid-value">GitHub Pages</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-footer">
+        <p><strong>Academic Year 2026 • Submission Deadline: 24 October 2026</strong></p>
+        <p>Uka Tarsadia University • Surat, Gujarat, India</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       PAGE 2: INTRODUCTION & PROJECT OBJECTIVES
+       ========================================================= -->
+  <div class="page-break">
+    <h1 class="sec-title">1. Introduction &amp; Project Objectives</h1>
+
+    <h2 class="sub-title">1.1 Introduction</h2>
+    <p>
+      In modern computing and software engineering, a personal developer portfolio serves as the definitive
+      digital identity and technical résumé for aspiring engineers. Rather than relying solely on static paper
+      résumés, an engineered, interactive web portfolio showcases practical mastery over core frontend
+      technologies, real-time 3D graphics rendering, responsive interface architectures, accessibility standards,
+      and professional Git version control workflows.
+    </p>
+    <p>
+      This academic project, titled <strong>Personal Portfolio Website</strong>, was designed and implemented as
+      a mandatory mini-project for the subject <strong>IT4048: Version Control with Git and GitHub</strong> at
+      <strong>Asha M. Tarsadia Institute of Computer Science and Technology (AMTICS)</strong>, Uka Tarsadia University.
+      The website provides a fast-loading, visually captivating presentation of <strong>Nidhi Patel's</strong>
+      academic profile, technical skills, activities (including Campus Ambassador at Techfest, IIT Bombay),
+      real-world projects, and downloadable curriculum vitae.
+    </p>
+
+    <h2 class="sub-title">1.2 Primary Objectives</h2>
+    <p>The core objectives achieved in this project include:</p>
+    <ul>
+      <li><strong>Professional Digital Presentation:</strong> Presenting student background, academic focus, competencies, and engineering activities in an organized, engaging layout.</li>
+      <li><strong>3D Visual Excellence &amp; Custom Aesthetic:</strong> Implementing a high-performance 3D background featuring a rotating geodesic wireframe sphere and dual orbital gyroscopic rings using Three.js, inspired by the digital archive theme of <code>tanishsaini.vercel.app</code>.</li>
+      <li><strong>Celestial Particle Trail Cursor:</strong> Implementing an interactive mouse pointer with fluid quadratic golden ribbon trails and 4-point diamond star sparkle inspired by <code>divyanshigupta.vercel.app</code>.</li>
+      <li><strong>Glassmorphic Architecture:</strong> Crafting translucent cards with <code>backdrop-filter: blur(14px)</code> so the 3D celestial canvas shines through the content.</li>
+      <li><strong>Mobile-First Responsiveness:</strong> Guaranteeing adaptive rendering across mobile phones (320px–480px), tablets (768px–1024px), and desktop displays.</li>
+      <li><strong>Version Control Mastery (IT4048):</strong> Implementing professional Git version control practices, including atomic semantic commit histories, branch management, and automated continuous deployment via GitHub Pages.</li>
+      <li><strong>Interactive Contact &amp; Résumé Delivery:</strong> Architecting a client-side validated contact form with status telemetry alongside working résumé vector PDF download functionality.</li>
+    </ul>
+
+    <h2 class="sub-title">1.3 Technologies Applied</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Category</th>
+          <th style="width: 28%;">Technology</th>
+          <th>Purpose / Role in Project</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Structure</strong></td>
+          <td>HTML5 (Semantic)</td>
+          <td>Document architecture utilizing semantic tags: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.</td>
+        </tr>
+        <tr>
+          <td><strong>Styling</strong></td>
+          <td>CSS3 (Custom Props)</td>
+          <td>Glassmorphism, custom design tokens, CSS Grid, Flexbox, scanline &amp; noise CRT overlays, and responsive media queries.</td>
+        </tr>
+        <tr>
+          <td><strong>3D Graphics</strong></td>
+          <td>Three.js (WebGL)</td>
+          <td>Interactive rotating Icosahedron geodesic wireframe sphere, dual Torus orbital rings, and 1200+ particle atmospheric dust field.</td>
+        </tr>
+        <tr>
+          <td><strong>Interactivity</strong></td>
+          <td>JavaScript (ES6+)</td>
+          <td>Celestial ribbon cursor engine, text scramble decrypt effect, active section scroll tracking, mobile drawer, and form validation.</td>
+        </tr>
+        <tr>
+          <td><strong>Version Control</strong></td>
+          <td>Git CLI</td>
+          <td>Local revision tracking, branch isolation (<code>main</code>), staged changes, and semantic commits.</td>
+        </tr>
+        <tr>
+          <td><strong>Hosting &amp; Remote</strong></td>
+          <td>GitHub &amp; GitHub Pages</td>
+          <td>Remote code synchronization, version backup, and automated static web publishing.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- =========================================================
+       PAGE 3: SYSTEM ARCHITECTURE & FEATURES
+       ========================================================= -->
+  <div class="page-break">
+    <h1 class="sec-title">2. System Architecture &amp; Features</h1>
+
+    <h2 class="sub-title">2.1 Directory Structure</h2>
+    <p>
+      The repository adheres to a clean, modular directory structure tailored for static web hosting and maintainability:
+    </p>
+
+    <pre class="code-block">
+NidhiPatel_PortfolioWebsite/
+├── index.html                   # Core semantic single-page web document
+├── README.md                    # Comprehensive repository documentation & badges
+├── css/
+│   └── style.css                # Central stylesheet (design tokens, glassmorphism, responsive rules)
+├── js/
+│   └── main.js                  # Three.js 3D sphere, celestial cursor & UI interactivity
+├── images/
+│   ├── avatar-placeholder.svg   # Vector avatar fallback
+│   ├── screenshot_desktop.png   # Desktop viewport visual evidence
+│   └── screenshot_mobile.png    # Mobile viewport visual evidence
+└── resume/
+    ├── README.md                # Placement instructions for resume file
+    └── resume.pdf               # Downloadable vector PDF curriculum vitae
+    </pre>
+
+    <h2 class="sub-title">2.2 Functional Modules &amp; Website Sections</h2>
+    <ul>
+      <li>
+        <strong>Home / Hero Section:</strong> Features student developer branding (<code>Nidhi Patel</code>), professional tagline, bio highlighting B.Tech CSE coursework and Techfest IIT Bombay Campus Ambassador role, infinite animated tech ticker, CTA buttons ("View Projects" &amp; "Get in Touch"), verified social icons, and an active résumé download button.
+      </li>
+      <li>
+        <strong>Education &amp; Academic Focus Section:</strong> Highlights undergraduate studies at <em>Asha M. Tarsadia Institute of Computer Science and Technology (Uka Tarsadia University)</em>, focusing on Version Control (IT4048), Java &amp; DSA, DBMS with MySQL, and Web Engineering.
+      </li>
+      <li>
+        <strong>Technical Skills &amp; Competencies:</strong> Features calibrated skill bars with subject annotations (Java &amp; DSA 75%, Python 72%, C Programming 70%, Web Development 82%, SQL &amp; MySQL 70%, Git &amp; GitHub 80%), followed by 12 interactive technology chips and soft skills badges.
+      </li>
+      <li>
+        <strong>Activities &amp; Leadership Section:</strong> Documents external engagement as <em>Campus Ambassador for Techfest, IIT Bombay</em> (student outreach &amp; coordination for Gandhinagar Zonal Round) and member of <em>Team HeritageCoders</em> for the Smart India Hackathon internal round.
+      </li>
+      <li>
+        <strong>Featured Projects Section:</strong> Showcases 4 real academic and competitive projects:
+        <em>Artisans360</em> (SIH Problem ID: SIH26090), <em>Pharmacy Management System</em> (Java &amp; MySQL JDBC), <em>Personal Portfolio Website</em> (GitHub Pages Deployment), and <em>Arduino Smart Rover</em> (HC-SR04 simulation on Wokwi).
+      </li>
+      <li>
+        <strong>Interactive Developer Terminal:</strong> Monospace retro terminal widget displaying real-time command-line metadata (<code>$ whoami</code>, <code>$ focus</code>, <code>$ sih</code>, <code>$ status</code>) and direct repository navigation.
+      </li>
+      <li>
+        <strong>Contact Form &amp; Communication Channels:</strong> Direct email link (<code>np.tech3000@gmail.com</code>), validated client-side contact form with simulated telemetry transmission feedback, and external links to GitHub and LinkedIn.
+      </li>
+    </ul>
+  </div>
+
+  <!-- =========================================================
+       PAGE 4: GIT & GITHUB PIPELINE
+       ========================================================= -->
+  <div class="page-break">
+    <h1 class="sec-title">3. Git &amp; GitHub Version Control Pipeline</h1>
+
+    <h2 class="sub-title">3.1 Version Control Methodology (IT4048 Core)</h2>
+    <p>
+      Version control is the engineering discipline of managing and tracking changes to software source code over time.
+      For this mini-project, Git was utilized to manage the codebase from ground zero through incremental feature additions,
+      refactorings, asset integrations, and remote publishing.
+    </p>
+
+    <h2 class="sub-title">3.2 Commit History &amp; Semantic Conventions</h2>
+    <p>
+      To ensure professional traceability and maintain an audit log, commits follow the <em>Conventional Commits</em> standard.
+      Every commit message explicitly declares its category, scope, and intent:
+    </p>
+    <ul>
+      <li><code>feat(structure): initialize semantic HTML5 portfolio foundation</code></li>
+      <li><code>style(design): implement retro dark theme with glassmorphism and CRT overlays</code></li>
+      <li><code>feat(3d): integrate Three.js wireframe geodesic sphere and dust particle field</code></li>
+      <li><code>feat(cursor): implement celestial star sparkle and golden ribbon trail canvas</code></li>
+      <li><code>feat(personalize): bind Nidhi Patel academic profile, LinkedIn, GitHub, and email</code></li>
+      <li><code>docs(report): generate academic project report and submission documentation</code></li>
+    </ul>
+
+    <h2 class="sub-title">3.3 Deployment Pipeline (GitHub Pages)</h2>
+    <p>
+      The application leverages GitHub Pages for continuous static delivery. The end-to-end workflow operates as follows:
+    </p>
+    <div class="flow-box">
+      <strong>Continuous Deployment Pipeline Flow:</strong><br>
+      Local Workspace → Git Staging (<code>git add</code>) → Semantic Commit (<code>git commit</code>) → Remote Push (<code>git push origin main</code>) → GitHub Pages Automated Build Worker → Live Global HTTPS Distribution at:<br>
+      <strong>https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/</strong>
+    </div>
+
+    <h2 class="sub-title">3.4 Quality Assurance &amp; Test Results</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 12%;">Test ID</th>
+          <th style="width: 25%;">Feature Tested</th>
+          <th style="width: 35%;">Test Action &amp; Input</th>
+          <th style="width: 18%;">Expected Result</th>
+          <th style="width: 10%;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TC-01</strong></td>
+          <td>Page Load &amp; HTTP Status</td>
+          <td>Load <code>index.html</code> via local test server and GitHub Pages.</td>
+          <td>HTTP 200 OK, zero console errors.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-02</strong></td>
+          <td>Three.js 3D Background</td>
+          <td>Verify WebGL initialization on <code>#bg3d</code> canvas.</td>
+          <td>Geodesic sphere &amp; dust particles animate smoothly.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-03</strong></td>
+          <td>Celestial Mouse Pointer</td>
+          <td>Move pointer across desktop viewport.</td>
+          <td>Golden ribbon trail and 4-point star sparkle render at cursor.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-04</strong></td>
+          <td>Scroll Parallax &amp; Dolly</td>
+          <td>Scroll from hero down to contact section.</td>
+          <td>Camera zooms and tilts smoothly with page scroll progress.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-05</strong></td>
+          <td>Mobile Hamburger Drawer</td>
+          <td>Resize viewport to 390px, toggle menu icon.</td>
+          <td>Drawer expands smoothly and links jump to targets.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-06</strong></td>
+          <td>Skill Bar Animation</td>
+          <td>Scroll down to <code>#skills</code> section.</td>
+          <td>Bars expand to data-width percentages via Observer.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-07</strong></td>
+          <td>Contact Form Validation</td>
+          <td>Submit empty form or invalid email.</td>
+          <td>Browser HTML5 constraint validation prevents submit.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+        <tr>
+          <td><strong>TC-08</strong></td>
+          <td>Résumé PDF Availability</td>
+          <td>Click "Download Résumé" button.</td>
+          <td>Browser triggers download of <code>resume.pdf</code>.</td>
+          <td><span class="badge-pass">PASS</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- =========================================================
+       PAGE 5: WEBSITE SCREENSHOTS
+       ========================================================= -->
+  <div class="page-break">
+    <h1 class="sec-title">4. Genuine Portfolio Website Screenshots</h1>
+
+    <h2 class="sub-title">4.1 Desktop Viewport (Hero &amp; 3D Background)</h2>
+    <div class="img-card">
+      <img src="../images/screenshot_desktop.png" alt="Desktop Viewport Screenshot">
+    </div>
+    <p class="img-caption">
+      Figure 4.1: Desktop view demonstrating Three.js wireframe 3D sphere, celestial mouse trail, glassmorphic cards, and student branding.
+    </p>
+
+    <h2 class="sub-title">4.2 Mobile Responsiveness (390px Viewport)</h2>
+    <div class="img-card img-card-mobile">
+      <img src="../images/screenshot_mobile.png" alt="Mobile Viewport Screenshot">
+    </div>
+    <p class="img-caption">
+      Figure 4.2: Mobile responsive rendering showing single-column layout, adaptive typography, and mobile navigation header.
+    </p>
+  </div>
+
+  <!-- =========================================================
+       PAGE 6: REAL-WORLD PROJECTS EVIDENCE
+       ========================================================= -->
+  <div class="page-break">
+    <h1 class="sec-title">5. Real-World Projects Evidence</h1>
+
+    <div class="project-card-report">
+      <span class="project-meta-pill">SIH INTERNAL ROUND</span>
+      <span class="project-meta-pill">HERITAGECODERS</span>
+      <h4>5.1 Project 01: Artisans360 — AI-Driven Market Linkage</h4>
+      <p style="margin-top: 5px;">
+        An AI-assisted market linkage and cataloging platform engineered for marginalized artisans (pottery, weaving, bamboo crafts).
+        Features automated product-photo tagging, intelligent cataloging, and an artisan marketplace with separate user and administrative
+        workflows. Prepared for the Smart India Hackathon under <strong>Problem Statement ID: SIH26090</strong> with team HeritageCoders.
+      </p>
+      <p style="font-size: 8pt; color: #4a5568; margin-bottom: 0;">
+        <strong>Technologies:</strong> AI/ML Concept, Smart Cataloging, Market Linkage, Web Architecture.
+      </p>
+    </div>
+
+    <div class="project-card-report">
+      <span class="project-meta-pill">JAVA · DATABASE</span>
+      <span class="project-meta-pill">JDBC DRIVER</span>
+      <h4>5.2 Project 02: Pharmacy Management System</h4>
+      <p style="margin-top: 5px;">
+        A comprehensive inventory management system built with Java and MySQL. Required designing normalized SQL schemas,
+        configuring JDBC driver connectivity, and utilizing Java <code>DriverManager</code> and <code>Connection</code> classes
+        for transaction management. Included diagnosing and resolving Windows MySQL daemon connection issues and driver configuration errors.
+      </p>
+      <p style="font-size: 8pt; color: #4a5568; margin-bottom: 0;">
+        <strong>Technologies:</strong> Java, MySQL, JDBC, Relational Database Management, SQL Querying.
+      </p>
+    </div>
+
+    <div class="project-card-report">
+      <span class="project-meta-pill">IT4048 ASSIGNMENT</span>
+      <span class="project-meta-pill">GITHUB PAGES</span>
+      <h4>5.3 Project 03: Personal Portfolio Website</h4>
+      <p style="margin-top: 5px;">
+        A high-performance personal developer website integrating Three.js 3D graphics, celestial canvas cursor physics, glassmorphic
+        cards, and automated GitHub Pages deployment. Showcases student bio, skills, extracurricular activities, and projects.
+      </p>
+      <p style="font-size: 8pt; color: #4a5568; margin-bottom: 0;">
+        <strong>Live Deployment:</strong> <a href="https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/" style="color: #2b6cb0;">https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/</a>
+      </p>
+    </div>
+
+    <div class="project-card-report">
+      <span class="project-meta-pill">EMBEDDED SYSTEMS</span>
+      <span class="project-meta-pill">WOKWI SIMULATION</span>
+      <h4>5.4 Project 04: Arduino Smart Rover</h4>
+      <p style="margin-top: 5px;">
+        An autonomous four-in-one smart robotics platform featuring obstacle avoidance, line following, and ultrasonic distance measurement
+        using the HC-SR04 sensor and Arduino Uno microcontroller. Prototyped and validated in Wokwi simulation prior to hardware assembly.
+      </p>
+      <p style="font-size: 8pt; color: #4a5568; margin-bottom: 0;">
+        <strong>Technologies:</strong> Arduino Uno, C/C++, HC-SR04 Sensor, Microcontroller Programming.
+      </p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       PAGE 7: VERIFICATION & CONCLUSION
+       ========================================================= -->
+  <div>
+    <h1 class="sec-title">6. Repository Verification &amp; Conclusion</h1>
+
+    <h2 class="sub-title">6.1 Verified Project Repositories &amp; Live Deployments</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width: 32%;">Resource</th>
+          <th>Verified Live Link / Repository URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GitHub Profile</strong></td>
+          <td><a href="https://github.com/np8-ai" style="color: #2b6cb0;">https://github.com/np8-ai</a></td>
+        </tr>
+        <tr>
+          <td><strong>Portfolio Repository</strong></td>
+          <td><a href="https://github.com/np8-ai/NidhiPatel_PortfolioWebsite" style="color: #2b6cb0;">https://github.com/np8-ai/NidhiPatel_PortfolioWebsite</a></td>
+        </tr>
+        <tr>
+          <td><strong>Live Website (GitHub Pages)</strong></td>
+          <td><a href="https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/" style="color: #2b6cb0;">https://np8-ai.github.io/NidhiPatel_PortfolioWebsite/</a></td>
+        </tr>
+        <tr>
+          <td><strong>LinkedIn Profile</strong></td>
+          <td><a href="https://www.linkedin.com/in/nidhi-patel-b30914437/" style="color: #2b6cb0;">https://www.linkedin.com/in/nidhi-patel-b30914437/</a></td>
+        </tr>
+        <tr>
+          <td><strong>Contact Email</strong></td>
+          <td><a href="mailto:np.tech3000@gmail.com" style="color: #2b6cb0;">np.tech3000@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td><strong>Submission Upload Drive</strong></td>
+          <td><a href="https://drive.google.com/drive/folders/122W5B3tNqc7r6aJS-tIkOIpjNgjHJ_dj?usp=sharing" style="color: #2b6cb0;">Google Drive Submission Folder</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="sub-title">6.2 Conclusion</h2>
+    <p>
+      The <strong>Personal Portfolio Website</strong> project successfully demonstrates comprehensive mastery
+      of core web engineering technologies (HTML5, CSS3, JavaScript, Three.js) in conjunction with industry-standard
+      version control methodologies using Git and GitHub.
+    </p>
+    <p>
+      Through disciplined engineering, atomic commit practices, responsive component design, and automated continuous
+      deployment on GitHub Pages, all academic and technical requirements for course <strong>IT4048: Version Control with Git and GitHub</strong>
+      have been thoroughly and rigorously fulfilled.
+    </p>
+    <p>
+      The resulting live website and documented projects stand as authentic, high-performance evidence representing
+      <strong>Nidhi Patel's</strong> academic and technical progress at Asha M. Tarsadia Institute of Computer Science
+      and Technology (AMTICS), providing a strong foundation for future software engineering and open-source contributions.
+    </p>
+
+    <div style="margin-top: 36px; display: flex; justify-content: space-between; font-size: 9.5pt; color: #4a5568;">
+      <div>
+        <p><strong>Date of Submission:</strong> 24 October 2026</p>
+        <p><strong>Place:</strong> Surat, Gujarat, India</p>
+      </div>
+      <div style="text-align: right;">
+        <p>___________________________________</p>
+        <p><strong>Nidhi Patel</strong></p>
+        <p>Student Signature</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
